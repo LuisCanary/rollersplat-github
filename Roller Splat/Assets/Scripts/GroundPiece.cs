@@ -10,8 +10,8 @@ public class GroundPiece : MonoBehaviour
 
     #region Private fields
 
-    [SerializeField]
-    private bool isColored = false;
+    [HideInInspector]
+    public bool isColored = false;
 
     #endregion // Private fields
 
