@@ -4,24 +4,39 @@ using UnityEngine;
 
 public class BallController : MonoBehaviour
 {
-    
+    /**********************************************************************************************/
+    /* Private fields                                                                             */
+    /**********************************************************************************************/
+
+    #region Private fields
+
     private Rigidbody rb;
     
     [SerializeField]
     private float speed;
 
     private bool isTravelling;
+
     private Vector3 travelDirection;
     private Vector3 nextCollisionPosition;
 
     [SerializeField]
     private int minSwipeRecognition = 500;
+
     private Vector2 swipePosLastFrame;
     private Vector2 swipePosCurrentFrame;
     private Vector2 currentSwipe;
 
     private Color solveColor;
-    
+
+    #endregion //Private fields
+
+
+    /**********************************************************************************************/
+    /* MonoBehaviour                                                                              */
+    /**********************************************************************************************/
+
+    #region MonoBehaviour
 
 
     public void Start()
@@ -53,8 +68,6 @@ public class BallController : MonoBehaviour
             i++;
         }
 
-
-
         if (nextCollisionPosition !=Vector3.zero)
         {
             if (Vector3.Distance(transform.position,nextCollisionPosition)<1)
@@ -65,9 +78,8 @@ public class BallController : MonoBehaviour
             }
         }
         if (isTravelling)
-        {
             return;
-        }
+        
 
         if (Input.GetMouseButton(0))
         {
@@ -83,7 +95,6 @@ public class BallController : MonoBehaviour
                 }
 
                 currentSwipe.Normalize();
-
                 
                 if (currentSwipe.x>-0.5f && currentSwipe.x<0.5f)
                 {
@@ -91,16 +102,12 @@ public class BallController : MonoBehaviour
 
                     SetDestination(currentSwipe.y > 0 ? Vector3.forward : Vector3.back);
                 }
-
-
                 if (currentSwipe.y > -0.5f && currentSwipe.y < 0.5f)
                 {
                     //Go Left/Right
                     SetDestination(currentSwipe.x > 0 ? Vector3.right : Vector3.left);
                 }
-
             }
-
             swipePosLastFrame = swipePosCurrentFrame;
         }
 
@@ -110,6 +117,14 @@ public class BallController : MonoBehaviour
             currentSwipe = Vector2.zero;
         }
     }
+
+    #endregion // MonoBehaviour
+
+    /**********************************************************************************************/
+    /* Private methods                                                                            */
+    /**********************************************************************************************/
+
+    #region Private methods
 
     private void SetDestination(Vector3 direction)
     {
@@ -122,8 +137,8 @@ public class BallController : MonoBehaviour
             nextCollisionPosition = hit.point;
         }
 
-
         isTravelling = true;
-
     }
+
+    #endregion // Private methods
 }

@@ -5,33 +5,63 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
+    /**********************************************************************************************/
+    /* Singleton                                                                            */
+    /**********************************************************************************************/
+
+    #region Singleton
 
     public static GameManager singleton;
 
-    private GroundPiece[] allGroundPieces;
-
-    private void Start()
-    {
-        SetUpNewLevel();
-    }
-
     private void Awake()
     {
-        if (singleton==null)
+        if (singleton == null)
         {
             singleton = this;
         }
-        else if (singleton!=this)
+        else if (singleton != this)
         {
             Destroy(gameObject);
             DontDestroyOnLoad(gameObject);
         }
     }
 
+    #endregion //Singleton
+
+    /**********************************************************************************************/
+    /* Private fields                                                                             */
+    /**********************************************************************************************/
+
+    #region Private fields
+
+    private GroundPiece[] allGroundPieces;
+
+    #endregion // Private fields
+
+    /**********************************************************************************************/
+    /* MonoBehaviour                                                                              */
+    /**********************************************************************************************/
+
+    #region MonoBehaviour
+
+    private void Start()
+    {
+        SetUpNewLevel();
+    }
+
     private void OnEnable()
     {
         SceneManager.sceneLoaded += OnLevelFinishedLoading;
     }
+
+    #endregion // MonoBehaviour
+
+
+    /**********************************************************************************************/
+    /* Private methods                                                                            */
+    /**********************************************************************************************/
+
+    #region Private methods
 
     private void OnLevelFinishedLoading(Scene scene, LoadSceneMode mode)
     {
@@ -41,24 +71,6 @@ public class GameManager : MonoBehaviour
     private void SetUpNewLevel()
     {
         allGroundPieces = FindObjectsOfType<GroundPiece>();
-    }
-
-    public void CheckComplete()
-    {
-        bool isFinished = true;
-
-        for (int i = 0; i < allGroundPieces.Length; i++)
-        {
-            if (allGroundPieces[i].isColored==false)
-            {
-                isFinished = false;
-                break;
-            }
-        }
-        if (isFinished)
-        {
-            NextLevel();
-        }
     }
 
     private void NextLevel()
@@ -71,4 +83,31 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
     }
 
+    #endregion // Private methods
+
+    /**********************************************************************************************/
+    /* Public methods                                                                             */
+    /**********************************************************************************************/
+
+    #region Public methods
+
+    public void CheckComplete()
+    {
+        bool isFinished = true;
+
+        for (int i = 0; i < allGroundPieces.Length; i++)
+        {
+            if (allGroundPieces[i].isColored == false)
+            {
+                isFinished = false;
+                break;
+            }
+        }
+        if (isFinished)
+        {
+            NextLevel();
+        }
+    }
+
+    #endregion // Public methods
 }
