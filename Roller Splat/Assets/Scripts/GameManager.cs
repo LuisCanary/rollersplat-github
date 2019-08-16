@@ -48,18 +48,18 @@ public class GameManager : MonoBehaviour
     {
         SetUpNewLevel();
     }
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Escape) && SceneManager.GetActiveScene().buildIndex!=0)
-        {
-            SceneManager.LoadScene(0);
-        }
-        else
-        {
-            Application.Quit();
-        }
+    //private void Update()
+    //{
+    //    if (Input.GetKeyDown(KeyCode.Escape) && SceneManager.GetActiveScene().buildIndex!=0)
+    //    {
+    //        SceneManager.LoadScene(0);
+    //    }
+    //    else
+    //    {
+    //        Application.Quit();
+    //    }
 
-    }
+    //}
 
     private void OnEnable()
     {
