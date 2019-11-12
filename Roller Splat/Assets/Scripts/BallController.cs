@@ -4,12 +4,13 @@ using UnityEngine;
 
 public class BallController : MonoBehaviour
 {
-    /**********************************************************************************************/
-    /* Private fields                                                                             */
-    /**********************************************************************************************/
+	/**********************************************************************************************/
+	/* Private fields                                                                             */
+	/**********************************************************************************************/
 
-    #region Private fields
+	#region Private fields
 
+	public static GameObject ball;
     private Rigidbody rb;
     
     [SerializeField]
@@ -41,6 +42,7 @@ public class BallController : MonoBehaviour
 
     public void Start()
     {
+		ball = this.gameObject;
         solveColor = Random.ColorHSV(0.5f,1);
         GetComponent<MeshRenderer>().material.color = solveColor;
         rb = GetComponent<Rigidbody>();
@@ -53,7 +55,7 @@ public class BallController : MonoBehaviour
            rb.velocity = speed*travelDirection;
         }
 
-        Collider[] hitColliders = Physics.OverlapSphere(transform.position - (Vector3.up / 2), 0.05f);
+        Collider[] hitColliders = Physics.OverlapSphere(transform.position - (Vector3.up / 2), 0.04f);
 
         int i = 0;
         while (i<hitColliders.Length)
@@ -132,7 +134,7 @@ public class BallController : MonoBehaviour
 
         RaycastHit hit;
 
-        if (Physics.Raycast(transform.position,direction,out hit,100f))
+        if (Physics.Raycast(transform.position,direction,out hit,10f))
         {
             nextCollisionPosition = hit.point;
         }

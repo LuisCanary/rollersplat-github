@@ -117,7 +117,8 @@ public class GameManager : MonoBehaviour
         }
         if (isFinished)
         {
-            NextLevel();
+		   BallController.ball.GetComponent<Animation>().Play();
+           Invoke("NextLevel",1);
         }
     }
     
