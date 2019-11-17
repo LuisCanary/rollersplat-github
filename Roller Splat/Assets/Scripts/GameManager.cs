@@ -5,6 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
+	public ParticleSystem confetiParticle;
+	
+
     /**********************************************************************************************/
     /* Singleton                                                                            */
     /**********************************************************************************************/
@@ -117,6 +120,7 @@ public class GameManager : MonoBehaviour
         }
         if (isFinished)
         {
+		   confetiParticle.gameObject.SetActive(true);
 		   BallController.ball.GetComponent<Animation>().Play();
            Invoke("NextLevel",1);
         }
