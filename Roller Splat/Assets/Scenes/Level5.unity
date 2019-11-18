@@ -2339,6 +2339,86 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 663859306}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &905141177
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5699708721032665660, guid: 3448d4caf5711904caabf33d74ffc5f7,
+        type: 3}
+      propertyPath: m_Name
+      value: ConfetiParticleComplexBigger (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5699708721032665660, guid: 3448d4caf5711904caabf33d74ffc5f7,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1819849259011369070, guid: 3448d4caf5711904caabf33d74ffc5f7,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1819849259011369070, guid: 3448d4caf5711904caabf33d74ffc5f7,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 10.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1819849259011369070, guid: 3448d4caf5711904caabf33d74ffc5f7,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 6.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1819849259011369070, guid: 3448d4caf5711904caabf33d74ffc5f7,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1819849259011369070, guid: 3448d4caf5711904caabf33d74ffc5f7,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1819849259011369070, guid: 3448d4caf5711904caabf33d74ffc5f7,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1819849259011369070, guid: 3448d4caf5711904caabf33d74ffc5f7,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.0000014603138
+      objectReference: {fileID: 0}
+    - target: {fileID: 1819849259011369070, guid: 3448d4caf5711904caabf33d74ffc5f7,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1819849259011369070, guid: 3448d4caf5711904caabf33d74ffc5f7,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -180
+      objectReference: {fileID: 0}
+    - target: {fileID: 1819849259011369070, guid: 3448d4caf5711904caabf33d74ffc5f7,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1819849259011369070, guid: 3448d4caf5711904caabf33d74ffc5f7,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 3448d4caf5711904caabf33d74ffc5f7, type: 3}
+--- !u!198 &905141178 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 5821872795254201001, guid: 3448d4caf5711904caabf33d74ffc5f7,
+    type: 3}
+  m_PrefabInstance: {fileID: 905141177}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &908371586 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2881716534342699334, guid: 7a926617e3cb63e4f861308b2e238204,
@@ -2977,7 +3057,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: abb58be0524972f43adb530d2e3f5841, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  confetiParticle: {fileID: 0}
+  confetiParticle: {fileID: 905141178}
 --- !u!4 &1189968747
 Transform:
   m_ObjectHideFlags: 0
@@ -5286,6 +5366,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4614156359017487671, guid: b45f0e84ec0c3e04f808e373c7c197f1,
+        type: 3}
+      propertyPath: color.r
+      value: 0.7179458
+      objectReference: {fileID: 0}
+    - target: {fileID: 4614156359017487671, guid: b45f0e84ec0c3e04f808e373c7c197f1,
+        type: 3}
+      propertyPath: color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4614156359017487671, guid: b45f0e84ec0c3e04f808e373c7c197f1,
+        type: 3}
+      propertyPath: color.b
+      value: 0.5803922
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b45f0e84ec0c3e04f808e373c7c197f1, type: 3}

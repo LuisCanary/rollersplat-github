@@ -12,8 +12,12 @@ public class BallController : MonoBehaviour
 
 	public static GameObject ball;
     private Rigidbody rb;
-    
-    [SerializeField]
+
+	[SerializeField]
+	public Color color;
+	public ParticleSystem splashParticle;
+	ParticleSystem.MainModule ma;
+	[SerializeField]
     private float speed;
 
     private bool isTravelling;
@@ -42,15 +46,19 @@ public class BallController : MonoBehaviour
 
     public void Start()
     {
+
+		ma = splashParticle.main;
+
 		ball = this.gameObject;
-        solveColor = Random.ColorHSV(0.5f,1);
+		solveColor = color;
         GetComponent<MeshRenderer>().material.color = solveColor;
         rb = GetComponent<Rigidbody>();
     }
 
     private void FixedUpdate()
     {
-        if (isTravelling)
+		ma.startColor = color;
+		if (isTravelling)
         {
            rb.velocity = speed*travelDirection;
         }

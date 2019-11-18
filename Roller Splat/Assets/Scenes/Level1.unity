@@ -2948,27 +2948,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1220983943 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4614156359017487669, guid: b45f0e84ec0c3e04f808e373c7c197f1,
-    type: 3}
-  m_PrefabInstance: {fileID: 4614156357920997280}
-  m_PrefabAsset: {fileID: 0}
---- !u!111 &1220983945
-Animation:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1220983943}
-  m_Enabled: 0
-  serializedVersion: 3
-  m_Animation: {fileID: 7400000, guid: e371265d1b30b614db5ccc15047d2985, type: 2}
-  m_Animations: []
-  m_WrapMode: 0
-  m_PlayAutomatically: 1
-  m_AnimatePhysics: 0
-  m_CullingType: 0
 --- !u!1001 &1246351621
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5339,45 +5318,5 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4614156359017487675, guid: b45f0e84ec0c3e04f808e373c7c197f1,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.99
-      objectReference: {fileID: 0}
-    - target: {fileID: 4614156359017487675, guid: b45f0e84ec0c3e04f808e373c7c197f1,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.99
-      objectReference: {fileID: 0}
-    - target: {fileID: 4614156359017487675, guid: b45f0e84ec0c3e04f808e373c7c197f1,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.99
-      objectReference: {fileID: 0}
-    - target: {fileID: 870880375, guid: b45f0e84ec0c3e04f808e373c7c197f1, type: 3}
-      propertyPath: m_Animations.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 870880375, guid: b45f0e84ec0c3e04f808e373c7c197f1, type: 3}
-      propertyPath: m_AnimatePhysics
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 870880375, guid: b45f0e84ec0c3e04f808e373c7c197f1, type: 3}
-      propertyPath: m_Animations.Array.data[1]
-      value: 
-      objectReference: {fileID: 7400000, guid: e371265d1b30b614db5ccc15047d2985, type: 2}
-    - target: {fileID: 870880375, guid: b45f0e84ec0c3e04f808e373c7c197f1, type: 3}
-      propertyPath: m_Animation
-      value: 
-      objectReference: {fileID: 7400000, guid: e371265d1b30b614db5ccc15047d2985, type: 2}
-    - target: {fileID: 870880375, guid: b45f0e84ec0c3e04f808e373c7c197f1, type: 3}
-      propertyPath: m_Animations.Array.data[0]
-      value: 
-      objectReference: {fileID: 7400000, guid: e371265d1b30b614db5ccc15047d2985, type: 2}
-    - target: {fileID: 870880375, guid: b45f0e84ec0c3e04f808e373c7c197f1, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 870880375, guid: b45f0e84ec0c3e04f808e373c7c197f1, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b45f0e84ec0c3e04f808e373c7c197f1, type: 3}
